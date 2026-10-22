@@ -11,8 +11,8 @@ read the data before the old one has written it. That is where items get duplica
 server restart, quick back and forth) or whole inventories disappear (save too slow under load). Every such case
 below has a defense in SafeSync and a bot test that fails when the defense is removed.
 
-> **Status:** version 1.0.0 is finished and tested, not released yet. Free edition: SpigotMC, CurseForge and
-> [Releases](../../releases/latest); full edition: Payhip (links when published).
+> **Status:** version 1.0.0 released: free edition in [Releases](../../releases/latest) (SpigotMC and CurseForge
+> soon), full edition on [Payhip](https://payhip.com/b/EMXB7).
 
 ## Editions
 
