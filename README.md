@@ -51,7 +51,13 @@ taken back. When the database answers again, players whose checkout is still hel
 
 **What a crash can cost: at worst the play since the last regular save (2 minutes by default, `autosave-seconds`).**
 Never an item in double, never the whole inventory. Tested by killing the server (`kill -9`) at each step of a
-player's departure: after the capture, after the encoding, before the database commit, after the release.
+player's departure: after the capture, after the encoding, before the database commit, after the release. The
+guarantee is per player: an item handed to another player during those last minutes is back with both after a crash,
+since each one gets their own last save.
+
+A save the database refuses for good (over 8 MB, or larger than the server's `max_allowed_packet`) is not retried:
+it is kept in `plugins/SafeSync/pending/` as a `.refused` file, logged once, and on departure the player's checkout
+is released so they get their last save back instead of staying stuck.
 
 ### Conflicts
 
@@ -198,6 +204,9 @@ generated `config.yml`.
 - Not compatible with per-world inventory plugins (Multiverse-Inventories, PerWorldInventory): each would overwrite
   the other's inventories. SafeSync warns at startup.
 - Not synced: money, unlocked maps, inventories of other plugins (backpacks...).
+- Items given by a kit or join plugin while the player's data is loading are replaced by the loaded data: give them
+  a moment after the join. Advancements and effects that only exist in a datapack are dropped when the player saves
+  on a server without that datapack.
 - No license server.
 
 ## Support
