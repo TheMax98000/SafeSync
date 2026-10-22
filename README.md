@@ -159,6 +159,7 @@ rest (health, XP...) keeps the Java value. The Bedrock data is kept as a snapsho
 | `/safesync restore <player> <id> [confirm]` | restore a snapshot (full) | `safesync.admin` |
 | `/safesync import husksync\|mib [--dry-run] [--overwrite]` | import (full) | `safesync.admin` |
 | `/safesync claim` | claim box after account linking (full) | `safesync.use` (everyone) |
+| `/safesync claim stuck`, `/safesync claim back <id>` | claim items given but never confirmed (server stopped in between): list, make one available again after checking the player's inventory (full) | `safesync.admin` |
 | `/safesync reload`, `/safesync version` | admin | `safesync.admin` |
 
 ## PlaceholderAPI (full edition)
