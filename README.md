@@ -12,8 +12,8 @@ server restart, quick back and forth) or whole inventories disappear (save too s
 below has a defense in SafeSync and a bot test that fails when the defense is removed.
 
 > **Status:** version 1.0.0 released: free edition on
-> [SpigotMC](https://www.spigotmc.org/resources/safesync-free.139845/) and in [Releases](../../releases/latest)
-> (CurseForge soon), full edition on [Payhip](https://payhip.com/b/EMXB7).
+> [SpigotMC](https://www.spigotmc.org/resources/safesync-free.139845/), in [Releases](../../releases/latest)
+> and on [CurseForge](https://www.curseforge.com/minecraft/bukkit-plugins/safesync-free), full edition on [Payhip](https://payhip.com/b/EMXB7).
 
 ## Editions
 
